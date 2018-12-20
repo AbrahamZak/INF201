@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>JavaScript II Assignment</title>
+    <style>
+        label, input {
+            display: block;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+        #togglingDiv {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+    <body>
+        
+        <h3>Challenge 1</h3>
+        <p>The form below should take in 3 inputs: height, width, and background color. When the user clicks "Submit Box Info", the div below this form should get the specified height, width, and background color added to its properties. You'll need to get the value of each input box to use for styling empty div. You can use the setAttribute method on the div with an id of "box" to get these results. You can also use .style.width, .style.height, etc.</p>
+        <form>
+            <label for="height">Height: </label><input type="text" id="height">
+            <label for="width">Width: </label><input type="text" id="width">
+            <label for="color">Color: </label><input type="text" id="color">
+            <button id="boxSubmit" type="button">Submit Box Info</button>
+        </form>
+        <div id="box"></div>
+        
+        <h3>Challenges 2 &amp; 3</h3>
+        <p>The form below takes in 1 input, a person's name. After the user clicks "Submit Name", it should tell them what their name is and how long it is. The output should look exactly as it is below except my name will be replaced by the name typed into your form. You will need a variable for your name, a for or while loop, and to use the substr property. While looping through the length of your name, you </p>
+        <p>Your name is Chris and that is 5 letters long.<br>
+        C<br>
+        Ch<br>
+        Chr<br>
+        Chri<br>
+        Chris</p>
+        <form>
+            First Name: <input type="text" id="firstName">
+            <button id="nameSubmit" type="button">Submit Name</button>
+        </form>
+        <p id="nameArea"></p>
+        
+        <h3>Challenge 4</h3>
+        <p>There is an empty unordered list below this paragraph. Create an array with at least 4 animals in it. Using a for or while loop, have each item in the array printed onto the page inside of the list (innerHTML combined with "+=" and li tags).</p>
+        <ul id="animalList"></ul>
+        
+        <h3>Challenge 5</h3>
+        <p>The following form takes in 3 inputs: width, length, and height. After a user clicks "Submit Dimensions", the form should tell the user the volume of their box. Also, if the user types in a blank value or a non-number, an error should appear on the page to let them know. It might tell the user "Please submit valid values" or something similar. You will need to get the length, width, and height values stored in variables. After this, you'll create a variable to store their total when multiplied together (volume). You can then use "isNaN" to check if the volume is a number or not. If it is, output the information. Otherwise, you would tell the user to put in valid values. </p>
+        <form>
+            <label for="boxWidth">Box Width: </label><input type="text" id="boxWidth">
+            <label for="boxLength">Box Length: </label><input type="text" id="boxLength">
+            <label for="boxHeight">Box Height: </label><input type="text" id="boxHeight">
+            <button type="button" id="dimensionsSubmit">Submit Dimensions</button>
+        </form>
+        <p id="boxInfo"></p>
+        
+        <h3>Challenge 6</h3>
+        <p>The div below is currently visible on the page. When the user clicks the "Toggle Div" button below, it should either hide or show the div depending on whether or not it is hidden already. For this, you'll need to use the .style property on the div to either make it display: none or display: block. You will also use an if/else statement to check the display property. </p>
+        <button type="button" id="toggleDiv">Toggle Div</button>
+        <div id="togglingDiv"></div>
+        
+        <script>    
+            /* GENERAL TIPS
+            For most challenges, you will need to get the button and inputs before you can complete the given task. 
+            document.getElementById("") will be your best bet for these challenges. 
+            */
+            
+            // Challenge 1 - Use user input to make a div have the specified height, width, and background color
+            document.getElementById("boxSubmit").onclick = function() {
+                document.getElementById("box").style.height = (document.getElementById('height').value + "px");;
+                
+                document.getElementById("box").style.width = (document.getElementById('width').value + "px");
+                document.getElementById("box").style.backgroundColor = document.getElementById('color').value;
+            }
+
+            
+            // Challenges 2 & 3 - Take user input and give them information about it
+            document.getElementById("nameSubmit").onclick = function() {
+                var name = document.getElementById('firstName').value;
+                
+                var nameLength = document.getElementById('firstName').value.length;
+                
+                var output = "Your name is " + name + " and that is " + nameLength + " letters long.<br>";
+                
+                var i;
+                for (i = 1; i<=nameLength; i++){
+                    output += name.substr(0,i) + "<br>";
+                }
+                
+                document.getElementById("nameArea").innerHTML = output;
+            }
+                    
+            // Challenge 4 - Create an array, loop through it, output content to the page using innerHTML
+            var animals = ["Lion", "Tiger", "Bear","Gorilla"];
+            var list = "";
+            var x;
+            for (x=0; x<animals.length; x++){
+                list += "<li>" + animals[x] + "</li>";
+            }
+            document.getElementById("animalList").innerHTML = list;
+            
+            // Challenge 5 - Take in 3 user inputs and tell them what the volume of a 3D box will be. You'll use innerHTML, parseInt, and value for this
+            document.getElementById("dimensionsSubmit").onclick = function() {
+                var x = parseInt(document.getElementById('boxWidth').value);
+                
+                var y = parseInt(document.getElementById('boxLength').value);
+                
+                var z = parseInt(document.getElementById('boxHeight').value);
+                
+                var vol = x*y*z;
+                
+                if (isNaN(vol)){
+                    document.getElementById("boxInfo").innerHTML = "Not a valid input!";
+                }
+                else{
+                    document.getElementById("boxInfo").innerHTML = "Volume: " + vol; 
+                }
+            }
+            // Challenge 6 - When the user clicks the button, the associated div's display should be set to either none or display depending on whether or not it's hidden already.
+             document.getElementById("toggleDiv").onclick = function() {
+                 if (document.getElementById("togglingDiv").style.display == 'block'){
+                     document.getElementById("togglingDiv").style.display = 'none';
+                 }
+                 else {
+                     document.getElementById("togglingDiv").style.display = 'block';
+                 }
+             }
+                 
+             
+            
+            
+        </script>
+        
+        
+    </body>
+</html>

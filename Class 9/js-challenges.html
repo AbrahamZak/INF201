@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>JS Challenges</title>
+</head>
+    <body>
+        
+        
+        <script>        
+            // Challenge 1 (add operators between numbers)
+            console.log(4 < 5);
+            console.log(6  > 3);
+            console.log(0  == 0);
+            
+            // Challenge 2 - for loop
+            for (let i = 1; i <= 100; i++) {
+                if (i%5 == 0){
+                    console.log("Multiple of 5.")
+                }
+                else{
+                console.log(i);
+                }
+            }
+            
+            // Challenge 3 - while loop
+            var x = 1;
+            while (x<=100){
+                if (x%5 == 0){
+                    console.log("Multiple of 5.")
+                }
+                else{
+                console.log(x);
+                }
+                x++;
+            }
+            
+            
+            // Challenge 4 - concatenation
+            var myAge = 21;
+            var myName = "Abraham Zakharov";
+            console.log("My name is " + myName + " and I am " + myAge + " years old.");
+            
+            // Challenge 5 - If/else statements
+            if (myAge>=21){
+                console.log("You are old enough to drink alcohol.")
+            }
+            else{
+                console.log("No alcohol for you!")
+            }
+            
+            // Challenge 6 - numberAdder function
+            function numberAdder(){
+                var total = 0;
+                for (let i = 1; i <= 100; i++) {
+                    total = total+i;
+                }
+                console.log(total);
+            }
+            
+            // Challenge 7 - boxVolume function
+            function boxVolume(x, y, z){
+                var volume = x*y*z;
+                console.log(volume);
+            }
+            
+        </script>
+    </body>
+</html>

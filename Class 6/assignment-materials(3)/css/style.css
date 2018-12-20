@@ -1,0 +1,87 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.row {
+    width:100%;
+}
+.row:after,
+.row:before {
+    content: "";
+    display: table;
+    clear: both;
+}     
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 10px;
+    box-shadow: 0 0 1em #666;
+}
+.row.header{
+     background-color:black;
+    color:white;
+}
+.row.header h2{
+    float: left;
+    margin: 20px;
+}
+.row.header a{
+    color: white;
+     text-decoration: none;
+}
+.row.header ul{
+    float: right;
+    margin: 20px;
+}
+.row.header li{
+    display: inline;
+    padding: 10px;
+}
+.two{
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+}
+
+.three{
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  text-align: center;
+    margin-top: 10px;
+}
+
+table{
+    text-align:center;
+    margin-left:auto; 
+    margin-right:auto;
+    background-color: black;
+    border-collapse: collapse;
+}
+th{
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+}
+td{
+    color: white;
+    text-align: left;
+    border: 1px solid white;
+    padding: 5px;
+}
+.blog .two{
+    background-color: lightgray;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid gray; 
+    height: 45%;
+}
+.row .footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+}

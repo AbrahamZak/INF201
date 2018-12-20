@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+.row {
+    width: 100%;
+}
+.row:before, 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.row p:nth-child(even) {
+        float: right;
+        display: block;
+        width: 500px;
+}
+.row p:nth-child(odd) {
+        float: left;
+        display: block;
+        width: 500px;
+}
+.rowRed img{
+        float: left;
+        display: block;
+    margin: 20px right;
+    padding: 10px;
+}
+.rowRed div{
+    background-color: red;
+    height: 200px;
+    width: 50%;
+    border: solid black 2px;
+    padding: 10px;
+    float: left;
+}
+.rowGreen div{
+    background-color: green;
+    height: 200px;
+    width: 33.33%;
+    border: solid black 2px;
+    float: left;
+}
+.rowBlue div{
+    background-color: blue;
+    height: 200px;
+    width: 25%;
+    border: solid black 2px;
+    float: left;
+}

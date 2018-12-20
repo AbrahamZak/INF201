@@ -1,0 +1,100 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+.row {
+    width:100%;
+
+}
+.row:after,
+.row:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+body {
+    margin: 0;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    line-height: 1.4;
+}
+/* Header Styles */
+.header {
+    background: black;
+}
+.header a {
+    float: left;
+    color: white;
+    text-decoration: none;
+    width: 25%;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Aside Styles */
+.aside {
+    float: left;
+    width:30%;
+}
+.aside h3 {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 5px;
+}
+.aside img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.aside .contact h3 {
+    margin: 0;
+}
+.aside form {
+    border: 1px solid black;
+    padding: 10px;
+}
+.aside label, .aside input, .aside textarea {
+    display: block;
+    width: 100%;
+}
+.aside input, .aside textarea {
+    margin-bottom: 10px;
+}
+
+/* Main Styles */
+.main {
+    line-height: 1.4;
+    float: left;
+    width: 65%;
+    margin-left: 5%;
+    background: lightGreen;
+    padding: 10px;
+}
+.main .row {
+    padding: 15px;
+    background: #FFE6AA;
+    color: black;
+}
+.main .row img {
+    float: left;
+    margin-right: 15px;
+}
+
+/* Footer Styles */
+.footer {
+    background: black;
+    text-align: center;
+    color: white;
+}
+.skipmain a{
+    color: white;
+    background: black;
+    text-decoration: none;
+    font-weight: bold;
+    position:fixed;
+    top:0;
+    left:0;
+}

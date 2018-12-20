@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+.row {
+    width: 100%;
+}
+.row:before, 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#blackBack{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+h1{
+    text-decoration: underline;
+}
+.firstSub{
+    background: black;
+    color: white;
+    text-align: center;
+}
+.secondSub{
+    background: blue;
+    color: white;
+    text-align: right;
+}
+.divOne{
+    background: black;
+}
+.whiteBack{
+    background: white;
+}
+.tableOne{
+    margin-left:auto; 
+    margin-right:auto;
+    border: 1px solid white;
+    background-color: white;
+}
+.divOne th{
+    padding: 5px;
+}
+.divOne td{
+    padding: 5px;
+}
+.tableOneWhite{
+    background: white;
+    color: black; 
+    border: 1px solid white;
+}
+.tableOneBlack{
+    background: black;
+    color: white; 
+    border: 1px solid white;
+}
+.blackList{
+    color: white;
+}
+.whiteList{
+    background: white;
+    color: black;
+    list-style-type: circle;
+}
+.divOne img{
+    display: block;
+    margin: 0 auto;
+}
+
+.divTwo p{
+    border: 2px dashed black;
+}
+
+.divTwo li:nth-child(even){
+    background-color: blue;
+    color: white;
+}
+.divTwo table{
+    border: 1px dotted red;
+    padding: 5px;
+}
+.divTwo th{
+   border: 1px dotted red;
+    padding: 5px;
+}
+.divTwo td{
+   border: 1px dotted red; 
+    padding: 5px;
+}
+.divTwo img{
+     border-radius: 50%;
+    border:1px solid black;
+}
+.divTwo td:nth-child(odd){
+    color: white;
+    background-color: red;
+}
+a {
+   font-size 1.5em; 
+    text-decoration: none;
+    display: block;
+}

@@ -1,0 +1,78 @@
+body{
+    background: red;
+    }
+.two,.three,.four,.five,.six{
+    display: none;
+}
+p{
+    color: black;
+    }
+
+
+@media(max-width: 1000px){
+    body{
+    background: blue;
+    }
+    .two{
+        display: block;
+    }
+.three,.four,.five,.six{
+    display: none;
+}
+    p{
+    color: gray;
+    }
+}
+@media(max-width: 850px){
+    body{
+    background: orange;
+    }
+    .two,.three{
+        display: block;
+    }
+.four,.five,.six{
+    display: none;
+}
+    p{
+    color: green;
+    }
+}
+@media(max-width: 700px){
+    body{
+    background: green;
+    }
+     .two,.three,.four{
+        display: block;
+    }
+.five,.six{
+    display: none;
+}
+    p{
+    color: red;
+    }
+}
+@media(max-width: 550px){
+    body{
+    background: black;
+    }
+     .two,.three,.four,.five{
+        display: block;
+    }
+.six{
+    display: none;
+}
+    p{
+    color: white;
+    }
+}
+@media(max-width: 400px){
+    body{
+    background: grey;
+    }
+     .two,.three,.four,.five,.six{
+        display: block;
+    }
+    p{
+    color: yellow;
+    }
+}

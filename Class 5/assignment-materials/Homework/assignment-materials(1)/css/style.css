@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+.row {
+    width: 100%;
+}
+.row:before, 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}

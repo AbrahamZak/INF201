@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Example</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #modal {
+            background: navy;
+            color: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            display: none;
+        }
+        #closeModal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border: 2px solid white;
+            padding: 5px;
+        }
+        #closeModal:hover {
+            color: navy;
+            background: white;
+            text-align: center;
+            cursor: pointer;
+        }
+        #modal h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <h3>Challenges 1 and 2:</h3>
+        <img id="img" src="https://via.placeholder.com/150x150?text=Hover+Over+Me" alt="">
+        <script>
+            // Challenges 1 and 2 JS/JQuery
+            $("img").mouseover(function() {
+        $("img").css({ width: '300px', height: '300px' });
+            });
+            $("img").mouseout(function() {
+        $("img").css({ width: '150px', height: '150px' });
+            });
+        </script>
+        
+        <h3>Challenges 3 and 4:</h3>
+        <form id="myForm">
+            <label for="message">Message: </label><br>
+            <textarea id="message"></textarea>
+            <p id="totalChars"></p>
+            <p id="errorOutput"></p>
+            <button id="messageSubmit" type="button">Submit Name</button>
+        </form>
+        <script>
+            // Challenges 3 and 4 JS/JQuery
+            $( "#message" ).keyup(function() {
+            $('#totalChars').text(this.value.length + ' characters used.');
+            });
+            
+            $( "#messageSubmit" ).click(function() {
+                var length = $("#message").val().length;
+                if (length>=144){
+                    $('#errorOutput').text('Too many characters, please shorten your message to 144 characters or less.');
+                }
+                else{
+                    $('#errorOutput').text('Success');
+                }
+            });
+        </script>
+        
+        <h3>Challenges 5 and 6:</h3>
+        <button id="showModal" type="button">Show Modal</button>
+        <div id="modal">
+            <h2>Congrats, you're a winner!</h2>
+            <span id="closeModal">X</span>
+        </div>
+        <script>
+            // Challenges 5 and 6 JS/JQuery
+             $( "#showModal" ).click(function() {
+                 $('#modal').show();
+             });
+            $( "#closeModal" ).click(function() {
+                 $('#modal').hide();
+             });
+        </script>
+        
+    </body>
+</html>

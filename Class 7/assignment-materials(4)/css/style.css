@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+.row {
+    width:100%;
+}
+.row:after,
+.row:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+body, html {
+    margin: 0;
+    height: 100%;
+    line-height: 1.4em;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+.main {
+    height: 100%;
+}
+.left{
+    background-color: red;
+    float: left;
+    width: 25%;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    height: 100%;
+}
+.middle{
+    background-color: green;
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    color: white;
+}
+.row .white-box{
+    background-color: white;
+    color: green;
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightblue;
+}
+.row .white-box img{
+    float: left;
+    margin: 10px;
+}
+.row .white-box p{
+    float: left;
+    width: 70%;
+    margin-left: 10px;
+}
+.one-third{
+    margin-top: 15px;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding: 10px;
+}
+.right{
+    background-color: blue;
+    float: left;
+    width: 25%;
+    height: 100%;
+    padding: 10px;
+    color: white;
+}
+.right li:nth-child(odd){
+    color: blue;
+    background-color: white;
+}
+.right ul{
+    list-style: none;
+    padding: 0;
+}
+.footer{
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+.header{
+    background: black;
+    color: white;
+}
+.header h2, nav{
+    float: left;
+}
+.header h2{
+    margin-left: 30px;
+}
+.header nav{
+    margin-left: 75px;
+    margin-top: 20px;
+}
+.header a{
+    color: white;
+    text-decoration: none;
+    padding-right: 15px;
+    float: left;
+}
